@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Full Video Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      padding: 40px;
+      text-align: center;
+      color: #222;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      width: 400px;
+      margin: 10px;
+    }
+    #stats {
+      margin-top: 30px;
+      display: none;
+      text-align: left;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    iframe, img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+    .stat {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    .label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔍 YouTube Full Video Info Viewer</h2>
+  <form onsubmit="getVideoStats(event)">
+    <input type="text" id="videoUrl" placeholder="Paste YouTube video link here" required>
+    <br>
+    <button type="submit">Fetch Info</button>
+  </form>
+
+  <div id="stats">
+    <h3 id="title"></h3>
+    <div class="stat"><span class="label">Channel:</span> <span id="channel"></span></div>
+    <div class="stat"><span class="label">Channel ID:</span> <span id="channelId"></span></div>
+    <div class="stat"><span class="label">Published:</span> <span id="published"></span></div>
+    <div class="stat"><span class="label">Views:</span> <span id="views"></span></div>
+    <div class="stat"><span class="label">Likes:</span> <span id="likes"></span></div>
+    <div class="stat"><span class="label">Comments:</span> <span id="comments"></span></div>
+    <div class="stat"><span class="label">Duration:</span> <span id="duration"></span></div>
+    <div class="stat"><span class="label">Definition:</span> <span id="definition"></span></div>
+    <div class="stat"><span class="label">Captions:</span> <span id="caption"></span></div>
+    <div class="stat"><span class="label">Licensed Content:</span> <span id="licensed"></span></div>
+    <div class="stat"><span class="label">Description:</span><br><span id="description"></span></div>
+    <img id="thumbnail" src="" alt="Thumbnail">
+    <h3>▶️ Embedded Video</h3>
+    <div id="embed"></div>
+  </div>
+
+  <script>
+    const API_KEY = 'AIzaSyC4R4SMnKe-3qx9aX8wXZiDjnx271Rvcmg';
+
+    function getVideoId(url) {
+      const regex = /(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+      const match = url.match(regex);
+      return match ? match[1] : null;
+    }
+
+    function formatViews(views) {
+      return Number(views).toLocaleString();
+    }
+
+    function formatDuration(isoDuration) {
+      const match = isoDuration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+      const hours = match[1] ? match[1] + ':' : '';
+      const minutes = match[2] ? match[2].padStart(2, '0') : '00';
+      const seconds = match[3] ? match[3].padStart(2, '0') : '00';
+      return hours + minutes + ':' + seconds;
+    }
+
+    async function getVideoStats(event) {
+      event.preventDefault();
+
+      const url = document.getElementById('videoUrl').value;
+      const videoId = getVideoId(url);
+      if (!videoId) {
+        alert("Invalid YouTube URL");
+        return;
+      }
+
+      const apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics,contentDetails&id=${videoId}&key=${API_KEY}`;
+
+      try {
+        const res = await fetch(apiUrl);
+        const data = await res.json();
+        if (!data.items || data.items.length === 0) {
+          alert("Video not found");
+          return;
+        }
+
+        const video = data.items[0];
+
+        document.getElementById('title').textContent = video.snippet.title;
+        document.getElementById('channel').textContent = video.snippet.channelTitle;
+        document.getElementById('channelId').textContent = video.snippet.channelId;
+        document.getElementById('published').textContent = new Date(video.snippet.publishedAt).toLocaleString();
+        document.getElementById('views').textContent = formatViews(video.statistics.viewCount);
+        document.getElementById('likes').textContent = formatViews(video.statistics.likeCount || 0);
+        document.getElementById('comments').textContent = formatViews(video.statistics.commentCount || 0);
+        document.getElementById('duration').textContent = formatDuration(video.contentDetails.duration);
+        document.getElementById('definition').textContent = video.contentDetails.definition.toUpperCase();
+        document.getElementById('caption').textContent = video.contentDetails.caption === "true" ? "Available" : "None";
+        document.getElementById('licensed').textContent = video.contentDetails.licensedContent ? "Yes" : "No";
+        document.getElementById('description').textContent = video.snippet.description;
+        document.getElementById('thumbnail').src = video.snippet.thumbnails.high.url;
+
+        document.getElementById('embed').innerHTML = `
+          <iframe width="100%" height="360" 
+            src="https://www.youtube.com/embed/${videoId}" 
+            title="YouTube video player" 
+            frameborder="0" allowfullscreen>
+          </iframe>
+        `;
+
+        document.getElementById('stats').style.display = 'block';
+
+      } catch (error) {
+        console.error('Error:', error);
+        alert("Failed to fetch data");
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,525 @@
+:root {
+    font-size: 16px; /* Base font size for rem calculations */
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+.header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.375rem; /* 70px */
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.name {
+    color: white;
+    font-family: 'Pompiere', sans-serif;
+    font-size: 1.5rem; /* 24px */
+    padding: 1.25rem; /* 20px */
+}
+
+.name2 {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem; /* 24px */
+    align-items: center;
+    padding: 0.625rem 0.9375rem; /* 10px 15px */
+    width: 30%; /* Adjust width as needed */
+}
+
+.name2 a {
+    color: white !important;
+    text-decoration: none;
+    padding: 15px 20px; /* Expands the clickable area */
+    display: inline-block; /* Ensures padding is clickable */
+    border-radius: 5px; /* Optional: for a button-like feel */
+}
+
+.name3 {
+    font-family: 'Lato', sans-serif;
+    background-color: white;
+    height: 3.0625rem; /* 49px */
+    font-size: 1.5rem; /* 24px */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.name3 a {
+    color: black !important;
+    text-decoration: none;
+    padding: 15px 20px; /* Expands the clickable area */
+    display: inline-block; 
+    border-radius: 5px; 
+}
+
+/* Hero Section */
+.hero {
+    height: 50rem;
+    position: relative;
+    overflow: hidden;
+    padding-top: 4.375rem; /* Account for fixed header */
+}
+
+.hero_name {
+    font-family: 'Pompiere';
+    font-size: 5rem;
+    text-align: center;
+    position: relative;
+    top: 3rem;
+}
+
+.hero_semicircle {
+    width: 57.1875rem; /* 915px */
+    height: 28.59375rem; /* 457.5px (Half of 915px) */
+    background-color: black;
+    border-top-left-radius: 55.1875rem; /* Same as width for a perfect semi-circle */
+    border-top-right-radius: 57.1875rem;
+    position: relative;
+    top: 30%;
+    left: 51%;
+    transform: translate(-50%, -50%); /* Centers the semi-circle */
+    z-index: 1;
+}
+
+.overlapping-image {
+    position: relative;
+    top: -66%; /* Adjust as needed to overlap properly */
+    left: 50%;
+    transform: translateX(-50%); /* Center the image */
+    width: 41.6875rem; /* Adjust size as needed */
+    height:  33.5rem; /* Maintain aspect ratio */
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
+}
+
+.hero_musician,
+.hero_Video,
+.hero_Designer,
+.hero_other {
+    font-family: 'Pompiere';
+    font-size: 3rem;
+    position: relative;
+}
+
+.hero_musician {
+    top: 3%;
+    left: 12%;
+}
+
+.hero_Video {
+    top: 3%;
+    right: -70%;
+}
+
+.hero_Designer {
+    top: 40%;
+    left: -15%;
+}
+
+.hero_other {
+    top: 40%;
+    right: -60%;
+}
+
+.lets_talk {
+    border-style: solid;
+    border-color: white;
+    width: 9.06rem;
+    height: 2.68rem;
+    position: absolute;
+    top: 92%; /* Move it to the vertical center */
+    left: 51%; /* Move it to the horizontal center */
+    transform: translate(-50%, -50%); /* Centers it perfectly */
+    color: black;
+    display: flex; /* Enables Flexbox */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    z-index: 3;
+}
+
+.lets_talk p {
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+.lets_talk:hover {
+    background-color: white; /* Change background to black */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.lets_talk:hover p {
+    color: black; /* Change text color to white */
+    transition: color 0.2s ease-in-out;
+}
+
+.socials {
+    width: 10.87rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    z-index: 4;
+}
+
+.socials img { 
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* My Work Section */
+.my_work {
+    position: relative;
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.myworktext {
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.card-work {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 3.75rem; /* Space between items */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 70rem;
+}
+
+.card-work a:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6); /* Background shadow */
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: all 0.3s ease;
+}
+
+.card-work a {
+    position: relative;
+    width: 100%;
+    height: 15rem;
+    z-index: 0;
+    display: block; /* Ensures the entire image area is clickable */
+    transition: all 0.3s ease;
+}
+
+.card-work img {
+    border-style: solid;
+    border-color: black;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images scale properly */
+}
+
+.textOvercard {
+    position: absolute;
+    bottom: -60px; /* Places text at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    font-family: 'Pompiere', sans-serif;
+    color: white;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+/* About Me Section */
+.AboutMe {
+    margin-top: 5rem;
+    width: 100%;
+    height: 44.375rem;
+    background-color: #998F86;
+    position: relative;
+    overflow: hidden; /* Prevents overflow */
+}
+
+.right-img {
+    width: 66.5rem;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.left-img {
+    width: 16.1875rem;
+    height: 100%;
+    position: absolute;
+    left: 23.5rem;
+    top: 0;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.overlay-text_one {
+    position: absolute;
+    left: 2rem;
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-family: 'Pompiere', sans-serif;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 3;
+    width: 31.25rem;
+    height: 14rem;
+    word-wrap: break-word; 
+    max-width: 80%;
+}
+
+.overlay-text {
+    position: absolute;
+    left: 2rem;
+    top: 15%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    font-family: 'Pompiere', sans-serif;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 3;
+}
+
+/* Contact Section */
+.contact {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.box1 {
+    width: 40rem;
+    height: 41rem;
+    border-style: solid;
+    box-shadow: -10px 10px 10px #000000;
+    max-width: 100%;
+}
+
+.box1 p {
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+    position: relative;
+    left: 5rem;
+}
+
+.box2 {
+    width: 40rem;
+    height: 41rem;
+    border-style: solid;
+    border-color: white;
+    max-width: 100%;
+}
+
+.form-group {
+    padding: 1.875rem;
+    position: relative;
+}
+
+.form-group input {
+    font-family: 'Roboto';
+    font-size: 1rem;
+    width: 28.75rem;
+    height: 3rem;
+    position: relative;
+    left: 3rem;
+    top: -2rem;
+    max-width: 80%;
+}
+
+.form-group label {
+    position: absolute;
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 0.75rem;
+    padding: 0 0.4rem;
+    top: -0.6rem;
+    left: 4rem;
+    z-index: 1;
+}
+
+.send-btn {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    width: 4.75rem;
+    height: 2.43rem;
+    background-color: white;
+    position: relative;
+    left: 4.5rem;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.box2 p {
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+    position: relative;
+    left: 5rem;
+}
+
+.connect_via {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 30rem;
+    height: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    position: relative;
+    top: 3rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.connect_via p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25rem;
+    color: black;
+    position: relative;
+    left: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0;
+}
+
+.connect_via:hover {
+    background-color: black;
+}
+
+.connect_via:hover p {
+    color: white;
+}
+
+.connect_via img {
+    position: relative;
+    top: 0.2rem;
+    left: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Footer */
+.footer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    padding: 2rem 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer-content div {
+    width: 12.75rem;
+    height: 12.68rem;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.footer p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+    line-height: 3rem;
+}
+
+.copyright p {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    color: white;
+    position: relative;
+    top: 3rem;
+    font-size: 0.8rem;
+}
+
+.socials1 {
+    width: 10.87rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    left: -45%;
+    top: 50%;
+    z-index: 4;
+}
+
+.socials1 img { 
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+/* Mobile Version */
+@media only screen and (max-width: 600px) {
+    
+}

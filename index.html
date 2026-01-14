@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+</head>
+<body>
+    <div id="header" class="header">
+        <span class="name">Chirag Gokani</span>
+        <div class="name2">
+            <a href="#">Home</a>
+            <a href="#my_work">Work</a>
+            <a href="#AboutMe">About</a>
+        </div>
+        <div class="name3">
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <div id="hero" class="hero">
+        <p class="hero_name">Hii, I am Chirag Gokani</p>
+            <span class="hero_musician">Musician</span>
+            <span class="hero_Video">Video Editor </span>
+            <span class="hero_Designer">Designer</span>
+            <span class="hero_other">Others</span>
+            <div class="lets_talk"><p>Let's Talk</p></div>
+            <div class="socials">
+                <a href="https://www.instagram.com/cm_gokani/" target="_blank">
+                    <img src="./Instagram.png" alt="Instagram" class="insta" data-hover="./insta hover.png" data-original="./Instagram.png">
+                </a>
+                <a href="https://www.linkedin.com/in/chiraggokani/" target="_blank">
+                    <img src="./Linkedin button.png" alt="LinkedIn" class="linkedin" data-hover="./linkedin hover.png" data-original="./Linkedin button.png">
+                </a>
+                <a href="https://open.spotify.com/artist/6GyI2zj9ckAsNPmhYEge0P?si=PuILrttiRO-tpfS3dpowcg" target="_blank">
+                    <img src="./Spotify button.png" alt="Spotify" class="spotify" data-hover="./Spotify-hover.png" data-original="./Spotify button.png">
+                </a>
+                <a href="https://music.apple.com/in/artist/chirag-gokani/1553450558?ls" target="_blank">
+                    <img src="./iTunes Button.png" alt="iTunes" class="itune" data-hover="./itune hover.png" data-original="./iTunes Button.png">
+                </a>
+                <a href="mailto:cmgokani7@gmail.com">
+                    <img src="./Gmail Button.png" alt="Gmail" class="gmail" data-hover="./gmail hover.png" data-original="./Gmail Button.png">
+                </a>
+                
+                <img src="./WhatsApp button.png" alt="WhatsApp" class="whatsapp" data-hover="./whatsapp hover.png" data-original="./WhatsApp button.png">
+            </div>
+        <div class="hero_semicircle">
+        </div>
+        <img src="./IMG_2935.png" alt="Overlapping Image" class="overlapping-image">
+        
+    </div>
+    <div  id="my_work" class="my_work">
+        <p class="myworktext">My Work</p>
+        <div class="card-work">
+            <a href="#" target="_blank">
+                <img src="./music_bg.png" alt="">
+                <p class="textOvercard">Music</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=mU1feHBG--Q" target="_blank">
+                <img src="./video_bg.png" alt="">
+                <p class="textOvercard">Videos Edited</p>
+            </a>
+            <a href="#">
+                <img src="./design bg.png" alt="">
+                <p class="textOvercard">Designs</p>
+            </a>
+            <a href="#">
+                <img src="./design bg.png" alt="">
+                <p class="textOvercard">Others</p>
+            </a>
+        </div>
+    </div>
+
+
+    <div id="AboutMe" class="AboutMe">
+        <img src="./Rectangle 4.png" alt="Left Image" class="left-img">
+        <p class="overlay-text">Hii, I am Chirag Gokani</p>
+        <p class="overlay-text_one">Hello I am Chirag Gokani, editor, designer, content manager and a football enthusiast. I guess the page describes enough about me
+            To quickly summarize, I am currently working with Anhsuman - video editor, Sahiba  - Page Manager & Video Editor <br>
+            <br> Open for more freelancing
+            <br>
+            <br>
+            <br>
+            <a href="" style="color:white; font-size: 1.5rem;" >Read More ></a>
+        </p>
+        <img src="./IMG_4145 (2).png" alt="Right Image" class="right-img">
+    </div>
+
+
+    <div id="contact" class="contact">
+
+
+            
+            <div class="box1">
+                <p>Get in touch...</p>
+
+                <form class="contact-form">
+                
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name here" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <!-- <label for="email">Email ID</label> -->
+                        <input type="email" id="email" placeholder="example@gmail.com" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <!-- <label for="subject">Subject</label> -->
+                        <input type="text" id="subject" placeholder="Enter subject here" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <!-- <label for="body">Body</label> -->
+                        <input id="body" placeholder="Yes, I'm good..." required></textarea>
+                    </div>
+            
+                    <button type="submit" class="send-btn" onclick="submitForm()">Send</button>
+                </form>
+            </div>
+            <div class="box2">
+
+                <p>Connect via social</p>
+                <!-- <div class="connect_via"></div> -->
+                <a href="https://www.instagram.com/cm_gokani/" target="_blank"><div class="connect_via"><img src="./insta.png" alt=""><p>@cm_gokani</p></div></a>
+                <a href="https://www.linkedin.com/in/chiraggokani/" target="_blank"><div class="connect_via"><img src="./linke.png" alt=""><p>@chiraggokani</p></div></a>
+                <a href="mailto:cmgokani7@gmail.com"><div class="connect_via"><img src="./mail.png" alt=""><p>cmgokani7@gmail.com</p></div></a>
+                <a href=""><div class="connect_via"><img src="./what.png" alt=""><p>+91 8160060977</p></div></a>
+                
+            </div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="line1"><p>Home</p></div>
+            <div class="line2">
+                <p>Music <br>Videos Edited <br>Websites Designed <br>Other Work</p> 
+               
+            </div>
+            <div class="line3"><p>About Me</p></div>
+            <div class="line4"><p>Connect <br> </p>
+                <div class="socials1">
+                    <a href="https://www.instagram.com/cm_gokani/" target="_blank">
+                        <img src="./Instagram.png" alt="Instagram" class="insta" data-hover="./insta hover.png" data-original="./Instagram.png">
+                    </a>
+                    <a href="https://www.linkedin.com/in/chiraggokani/" target="_blank">
+                        <img src="./Linkedin button.png" alt="LinkedIn" class="linkedin" data-hover="./linkedin hover.png" data-original="./Linkedin button.png">
+                    </a>
+                    <a href="https://open.spotify.com/artist/6GyI2zj9ckAsNPmhYEge0P?si=PuILrttiRO-tpfS3dpowcg" target="_blank">
+                        <img src="./Spotify button.png" alt="Spotify" class="spotify" data-hover="./Spotify-hover.png" data-original="./Spotify button.png">
+                    </a>
+                    <a href="https://music.apple.com/in/artist/chirag-gokani/1553450558?ls" target="_blank">
+                        <img src="./iTunes Button.png" alt="iTunes" class="itune" data-hover="./itune hover.png" data-original="./iTunes Button.png">
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cmgokani7@gmail.com">
+                        <img src="./Gmail Button.png" alt="Gmail" class="gmail" data-hover="./gmail hover.png" data-original="./Gmail Button.png">
+                    </a>
+                    
+                    <img src="./WhatsApp button.png" alt="WhatsApp" class="whatsapp" data-hover="./whatsapp hover.png" data-original="./WhatsApp button.png">
+                </div>
+        </div>
+        </div>
+        <div class="copyright">
+            <p>&COPY; 2024 | Designed by Chirag Gokani</p>
+        </div>
+    </footer>
+    
+    
+   
+    
+    <script src="./script.js"></script>
+</body>
+</html>
