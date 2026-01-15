@@ -429,18 +429,19 @@ body {
     border: 1px solid white;
     padding: 20px;
     /* Space inside the div */
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     /* Space below each div */
     width: auto;
-    height: 30%;
+    height: auto;
     display: block;
 }
 
 .music_body_one .latest_release {
     font-size: 3rem;
     font-family: 'Lato', sans-serif;
-    left: 5px;
+
     position: relative;
+    top: -5%;
     left: 5%;
 }
 
@@ -458,25 +459,20 @@ body {
     margin-left: 5%;
 }
 
-
-
-
 .title img {
     display: block;
-    /* Makes image responsive */
-
-
+    height: 100%;
 }
 
 
 
 .overlay-some {
     position: absolute;
-    top: 162%;
-    left: 2%;
+    top: 150%;
+    left: 4%;
     color: #c1c1c1;
     padding: 10px 20px;
-    font-size: 20px;
+    /* font-size: 20px; */
     text-align: center;
     transform: rotate(-90deg);
     font-family: 'Lato', sans-serif;
@@ -495,18 +491,18 @@ body {
 /* Arrow on extreme right */
 .listen img {
     position: absolute;
-    right: 5%;
+    right: 0%;
     /* adjust */
     top: 50%;
     transform: translateY(-50%);
     width: 120px;
-    height: auto;
+    height: 131%;
 }
 
 /* Text just left of arrow */
 .music_body_one .listen_more {
     position: absolute;
-    right: calc(5% + 130px);
+    right: calc(0% + 130px);
     /* arrow width + gap */
     top: 0%;
     transform: translateY(-50%);
@@ -515,6 +511,115 @@ body {
     color: #c1c1c1;
 }
 
+.motion{
+    background-color: #000;
+    height: 878px;
+    align-items: stretch;
+    display: flex;
+
+}
+.motion_body {
+  flex: 1;   
+    flex-direction: column;      /* takes remaining space */
+}
+.motion_subbody_one {
+  height: 407px;
+}
+
+.motion_subbody_one .showreel_text{
+    font-size: 3rem;
+    position: relative;
+    left: 12%;
+    top: 10%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.showreel_frame{
+    position: absolute;
+    left: 25%;
+}
+
+.motion_subbody_two {
+  height: 306px;
+}
+
+.projects_api{
+    position: relative;
+    left: -20%;
+    top: 20%;
+    display: flex;
+    gap: 20px;
+}
+
+.motion_subbody_three {
+  height: 163px;
+}
+
+.motion_frame {
+  width: 338px;
+  max-width: 338px;
+  height: 878px;
+   position: relative;
+   display: block;
+}
+
+.motion_frame img {
+  width: 100%;
+  height: 100%;
+}
+
+.projects_text{
+    font-size: 2rem;
+    position: absolute;
+    left: 33%;
+    top: -30%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay_motion {
+    position: absolute;
+    top: 28%;
+    left: -67%;
+    color: #c1c1c1;
+    padding: 10px 20px;
+    /* font-size: 20px; */
+    text-align: center;
+    transform: rotate(90deg);
+    font-family: 'Lato', sans-serif;
+    font-size: 8rem;
+
+}
+
+.watch {
+    position: relative;
+    /* anchor for absolute children */
+    width: 100%;
+    height: 120px;
+    /* adjust as needed */
+}
+
+/* Arrow on extreme right */
+.watch img {
+    position: absolute;
+    right: 6%;
+    /* adjust */
+    top: 67%;
+    transform: translateY(-50%);
+    width: 120px;
+    height: 131%;
+}
+.motion_subbody_three .watch_row {
+    position: absolute;
+    right: calc(6% + 130px);
+    /* arrow width + gap */
+    top: 9%;
+    transform: translateY(-50%);
+    font-family: 'Lato', sans-serif;
+    font-size: 4rem;
+    color: #838383;
+}
 
 
 /* My Work Section */
