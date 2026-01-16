@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/send-mail", {
+      const res = await fetch("https://cm-gokani-final.onrender.com/api/send-mail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
