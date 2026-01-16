@@ -432,7 +432,32 @@ body {
     /* margin-bottom: 10px; */
     /* Space below each div */
     width: auto;
-    height: auto;
+    /* height: auto; */
+    display: block;
+    height: 407px;
+}
+
+.music_body_two {
+    /* background-color: #f0f0f0; Light gray background */
+    border: 1px solid white;
+    padding: 20px;
+    /* Space inside the div */
+    /* margin-bottom: 10px; */
+    /* Space below each div */
+    width: auto;
+    height: 306px;
+    display: block;
+}
+
+.music_body_three {
+    /* background-color: #f0f0f0; Light gray background */
+    border: 1px solid white;
+    padding: 20px;
+    /* Space inside the div */
+    /* margin-bottom: 10px; */
+    /* Space below each div */
+    width: auto;
+    height: 165px;
     display: block;
 }
 
@@ -453,7 +478,7 @@ body {
     top: -7%;
 }
 
-.music_body_one .yt_colab {
+.music_body_two .yt_colab {
     font-size: 1.8rem;
     font-family: 'Lato', sans-serif;
     margin-left: 5%;
@@ -470,6 +495,19 @@ body {
     position: absolute;
     top: 150%;
     left: 4%;
+    color: #c1c1c1;
+    padding: 10px 20px;
+    /* font-size: 20px; */
+    text-align: center;
+    transform: rotate(-90deg);
+    font-family: 'Lato', sans-serif;
+    font-size: 8rem;
+
+}
+.overlay-design {
+    position: absolute;
+    top: 408%;
+    left: 2%;
     color: #c1c1c1;
     padding: 10px 20px;
     /* font-size: 20px; */
@@ -500,7 +538,7 @@ body {
 }
 
 /* Text just left of arrow */
-.music_body_one .listen_more {
+.music_body_three .listen_more {
     position: absolute;
     right: calc(0% + 130px);
     /* arrow width + gap */
@@ -697,7 +735,7 @@ body {
 
 /* About Me Section */
 .AboutMe {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     width: 100%;
     height: 44.375rem;
     background-color: #998F86;
@@ -801,7 +839,7 @@ body {
     width: 28.75rem;
     height: 3rem;
     position: relative;
-    left: 3rem;
+    left: 1rem;
     top: -2rem;
     max-width: 80%;
 }
@@ -824,7 +862,7 @@ body {
     height: 2.43rem;
     background-color: white;
     position: relative;
-    left: 4.5rem;
+    left: 2.7rem;
     cursor: pointer;
 }
 

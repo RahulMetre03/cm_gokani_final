@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hi!</title>
     <link rel="stylesheet" href="./stylesthree.css">
     <link href='https://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
@@ -93,24 +93,24 @@
     overflow: hidden;
   "></iframe>
             </div>
-            <div class="music_body_one">
+            <div class="music_body_two">
                 <p class="yt_colab">Collaborations</p>
                 <div class="yt_api">
-                    <iframe width="287" height="161" src="https://www.youtube.com/embed/kPtn26x8TZM?si=CGVSyxqN2iEz2Z6h"
+                    <iframe width="287" height="161" src="https://www.youtube.com/embed/rIA0D5Eknbs?si=WycX9tMm49L85eno"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <iframe width="287" height="161" src="https://www.youtube.com/embed/kPtn26x8TZM?si=CGVSyxqN2iEz2Z6h"
+                    <iframe width="287" height="161" src="https://www.youtube.com/embed/3G8bij2F1Sg?si=ogrBEPbv1yiCvidi"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <iframe width="287" height="161" src="https://www.youtube.com/embed/kPtn26x8TZM?si=CGVSyxqN2iEz2Z6h"
+                    <iframe width="287" height="161" src="https://www.youtube.com/embed/hsGUKIKEMsI?si=epYTUh_cKNAxMOLB"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="music_body_one">
+            <div class="music_body_three">
                 <div class="listen">
                     <img src="./assests/Arrow.svg" alt="">
                     <p class="listen_more">LISTEN MORE</p>
@@ -120,7 +120,7 @@
         </div>
 
     </div>
-    <div class="motion">
+    <div class="motion" id="motion">
 
         <div class="motion_body">
 
@@ -170,32 +170,12 @@
 
     </div>
 
-
-
-
-
-    <div id="my_work" class="my_work">
-        <p class="myworktext">My Work</p>
-        <div class="card-work">
-            <a href="#" target="_blank">
-                <img src="./music_bg.png" alt="">
-                <p class="textOvercard">Music</p>
-            </a>
-            <a href="https://www.youtube.com/watch?v=mU1feHBG--Q" target="_blank">
-                <img src="./video_bg.png" alt="">
-                <p class="textOvercard">Videos Edited</p>
-            </a>
-            <a href="#">
-                <img src="./design bg.png" alt="">
-                <p class="textOvercard">Designs</p>
-            </a>
-            <a href="#">
-                <img src="./design bg.png" alt="">
-                <p class="textOvercard">Others</p>
-            </a>
+    <div class="design" id="design">
+        <div class="title">
+            <img src="./assests/bulb.svg" alt="Bulb">
+            <div class="overlay-design">DESIGN</div>
         </div>
     </div>
-
 
     <div id="AboutMe" class="AboutMe">
         <img src="./Rectangle 4.png" alt="Left Image" class="left-img">
@@ -221,31 +201,54 @@
         <div class="box1">
             <p>Get in touch...</p>
 
-            <form class="contact-form">
+            <form class="contact-form" id="contactForm">
 
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Enter your name here"
+      required
+    >
+  </div>
 
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter your name here" required>
-                </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="example@gmail.com"
+      required
+    >
+  </div>
 
-                <div class="form-group">
-                    <!-- <label for="email">Email ID</label> -->
-                    <input type="email" id="email" placeholder="example@gmail.com" required>
-                </div>
+  <div class="form-group">
+    <label for="subject">Subject</label>
+    <input
+      type="text"
+      id="subject"
+      name="subject"
+      placeholder="Enter subject here"
+      required
+    >
+  </div>
 
-                <div class="form-group">
-                    <!-- <label for="subject">Subject</label> -->
-                    <input type="text" id="subject" placeholder="Enter subject here" required>
-                </div>
+  <div class="form-group">
+    <label for="message">Body</label>
+    <input
+      id="message"
+      name="message"
+      placeholder="Yes, I'm good..."
+      required
+    >
+  </div>
 
-                <div class="form-group">
-                    <!-- <label for="body">Body</label> -->
-                    <input id="body" placeholder="Yes, I'm good..." required></textarea>
-                </div>
+  <button type="submit" class="send-btn">Send</button>
+</form>
 
-                <button type="submit" class="send-btn" onclick="submitForm()">Send</button>
-            </form>
         </div>
         <div class="box2">
 
@@ -327,5 +330,4 @@
 
     <script src="./scripttwo.js"></script>
 </body>
-
 </html>
