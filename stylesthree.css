@@ -332,7 +332,7 @@ body {
 
 .overlapping-image {
     position: relative;
-    top: -73%;
+    top: -75%;
     /* Adjust as needed to overlap properly */
     left: 50%;
     transform: translateX(-50%);
