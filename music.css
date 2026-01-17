@@ -1,22 +1,23 @@
 .originals{
-    height: 738px;
+    height: 450px;
     position: relative;
+      overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .my_originals{
     color: black;
     position: absolute;
     left: 40%;
-    top: 14%;
+    top: 20%;
     font-size: 3rem;
     padding: 20px;
       font-family: 'Lato', sans-serif;
   font-weight: 600;
+  margin-top: 35px;
 }
 
 .original_flex{
-      display: grid;
-  grid-template-columns: repeat(3, 1fr);
     position: absolute;
     top: 33%;
     left: 10%;
@@ -87,3 +88,104 @@ background-color: black;
       display: block;
       object-fit: cover;
 }
+
+.music-toggle {
+    position: relative;
+    top: 26%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    width: 140px;
+    padding: 6px;
+    background: #111;
+    border-radius: 30px;
+    gap: 6px;
+    margin-top: 35px;
+}
+
+
+
+.music-toggle button {
+    flex: 1;
+    height: 42px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.music-toggle img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.music-toggle button.active img {
+    opacity: 1;
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: calc(50% - 6px);
+    height: 42px;
+    background: #1db954;
+    border-radius: 24px;
+    transition: transform 0.4s ease;
+    z-index: 1;
+}
+
+/* Apple selected */
+.music-toggle.apple-active .toggle-slider {
+    transform: translateX(100%);
+    background: #fc3c44;
+}
+
+
+.music-group {
+        display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: none;
+    gap: 180px;
+}
+
+.music-group iframe {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.music-group.active {
+    opacity: 1;
+    display: grid;
+    transform: translateY(0);
+    pointer-events: auto;
+    position: relative;
+    margin-top: 110px;
+    gap: 170px;
+}
+
+.originals.apple-active {
+    height: 400px;
+}
+
+.my_originals.apple-active{
+
+    color: black;
+    position: absolute;
+    left: 40%;
+    top: 22.3%;
+    font-size: 3rem;
+    padding: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+
+}
+
