@@ -1,0 +1,89 @@
+.originals{
+    height: 738px;
+    position: relative;
+}
+
+.my_originals{
+    color: black;
+    position: absolute;
+    left: 40%;
+    top: 14%;
+    font-size: 3rem;
+    padding: 20px;
+      font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+
+.original_flex{
+      display: grid;
+  grid-template-columns: repeat(3, 1fr);
+    position: absolute;
+    top: 33%;
+    left: 10%;
+    gap: 60px;
+   
+}
+
+.original_flex img{
+    width: 380px;
+    height: 380px;
+      display: block;
+      object-fit: cover;
+}
+.song_details {
+background-color: black;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 18px 10px;
+}
+.card_title_song {
+  color: #fff;
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  margin: 0;
+}
+
+.card_title_creator {
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+
+.produced{
+    height: 864px;
+    position: relative;
+}
+
+.produced_flex{
+      display: grid;
+  grid-template-columns: repeat(3, 1fr);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    gap: 60px;
+   
+}
+
+.my_produced{
+    color: black;
+    position: absolute;
+    left: 37%;
+    top: 5%;
+    font-size: 3rem;
+    padding: 20px;
+      font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+
+.produced_flex img{
+    width: 380px;
+    height: 213px;
+      display: block;
+      object-fit: cover;
+}
