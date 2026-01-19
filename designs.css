@@ -207,3 +207,37 @@
  font-family: 'Lato', sans-serif;
     font-weight: 500;
 }
+
+.quote_text,
+.quote_name,
+.name_designation {
+    transition: opacity 0.3s ease;
+}
+
+.testimonial_card {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.testimonial_card.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.testimonial_card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.left_arrow img,
+.right_arrow img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.left_arrow:hover img {
+    transform: translateX(-4px);
+}
+
+.right_arrow:hover img {
+    transform: translateX(4px);
+}
