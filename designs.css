@@ -1,0 +1,209 @@
+.designs{
+    height: 1500px;
+    background-color: white;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.my_design{
+    height: 200px;
+    color: black;
+    font-size: 3rem;
+    margin-top: 80px;
+     font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.design_frame{
+    width: 1180px;
+    height: 409px;
+    display: flex;
+       border: 4px solid #000;
+    box-shadow: 8px 8px 0 #000;
+    position: relative;
+    left: 10%;
+
+}
+.project_name{
+    width: 214px;
+    height: 44px;
+    color: black;
+    font-size: 2rem;
+    margin-top: 80px;
+   font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    position: absolute;
+    left: 4%;
+    top: -9%;
+}
+
+.project_platform{
+    width: 160px;
+    height: 44px;
+    color: black;
+    font-size: 0.8rem;
+    margin-top: 80px;
+   font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    position: absolute;
+    left: 4%;
+    top: 4%;
+}
+
+.project_description{
+    width: 460px;
+    height: 76px;
+    color: black;
+    font-size: 0.8rem;
+    margin-top: 80px;
+     font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    position: absolute;
+    left: 4%;
+    top: 12%;
+}
+.project_logo {
+    position: absolute;
+    left: 4%;
+    top: 70%;
+    display: flex;
+    gap: 40px;
+}
+.project_logo img{
+    height: 80px;
+    width: 80px;
+
+}
+
+.project_screenshot{
+    position: absolute;
+    right: 4%;
+    top: 10%;
+    display: flex;
+    gap: 30px;
+}
+
+.project_screenshot img{
+    width: 148px;
+    height: 319px;
+}
+
+.project_screenshot img.projectss {
+    width: 560px;
+    height: 337px;
+}
+
+.projectss{
+    width: 337px;
+    height: 560px;
+}
+
+.testimonials{
+    height: 600px;
+}
+
+.testimonial_card{
+    height: 305px;
+    width: 1020px;
+     display: flex;
+       border: 1px solid #000;
+    box-shadow: 3px 3px 0 #000;
+    position: relative;
+    left: 17%;
+}
+
+.quotes{
+    position: absolute;
+    left: 3% ;
+    top: 10% ;
+}
+
+.quote_text{
+    position: absolute;
+    width: 484px;
+    font-size: 1.4rem;
+    left: 8%;
+    top: 17%;
+}
+
+
+.quote_credits{
+    position: absolute;
+    right :8%;
+    top:  60%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.quote_name{
+
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.name_designation{
+        font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.11rem;
+}
+
+.left_arrow{
+    position: absolute;
+    left: 10%;
+    margin-top: 10%;
+}
+.right_arrow{
+    position: absolute;
+    right: 10%;
+    margin-top: -12%;
+}
+
+.software_logos{
+      display: flex;
+    flex-direction: row;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+}
+.software_data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.software_logo img{
+    width: 214px;
+    height: 139px;
+}
+
+.softwares{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.software_used{
+    height: 50px;
+    display:flex ;
+      align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+ font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+
+.software_nam{
+    font-size: 1.33rem;
+ font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
